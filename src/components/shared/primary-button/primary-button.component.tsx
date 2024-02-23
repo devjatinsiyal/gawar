@@ -33,7 +33,7 @@ const PrimaryButton: FC<PrimaryButtonProps> = ({
     <div className={buttonContainer}>
       {iconPlacement && iconPlacement === 'left' ? (
         <div className={logoContainer}>
-          <ArrowLeftImage color='white' />
+          <ArrowLeftImage />
         </div>
       ) : null}
       <div className={buttonTitle}>{title}</div>
