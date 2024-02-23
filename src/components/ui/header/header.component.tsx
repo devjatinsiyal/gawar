@@ -17,17 +17,7 @@ const stickyStyles: Record<string, string | number> = {
   zIndex: 999,
 }
 
-const {
-  header,
-  logo,
-  nav__links,
-  cta,
-  menu,
-  overlay__content,
-  close,
-  overlay,
-  active,
-} = styles
+const { header, logo, nav__links, cta, menu, active } = styles
 
 const Header: FC<HeaderProps> = ({ title: headerTitle, sticky }) => {
   const navLinks = [
@@ -80,7 +70,12 @@ const Header: FC<HeaderProps> = ({ title: headerTitle, sticky }) => {
             ))}
           </ul>
         </nav>
-        <CardButton title='Lets talk' onClick={() => console.log('working')} />
+        <CardButton
+          title='Lets talk'
+          onClick={() => {
+            console.log('working')
+          }}
+        />
         {/* <Link className={cta} href='#'>
           Lets talk
         </Link> */}

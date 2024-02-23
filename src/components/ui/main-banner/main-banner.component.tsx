@@ -1,5 +1,5 @@
 'use client'
-import { CSSProperties, type FC } from 'react'
+import { type CSSProperties, type FC } from 'react'
 
 import styles from './main-banner.module.scss'
 import CardButton from '@/components/shared/card-button/card-button.component'
@@ -12,23 +12,16 @@ interface BannerProps {
   overrides?: NestedRecord
 }
 
-const overrides: Record<string, CSSProperties> = {
-  buttonTitle: {
-    transformOrigin: 'right center',
-  },
-  cardButton: {
-    transformOrigin: 'right center',
-  },
-}
+// const customOverrides: Record<string, CSSProperties> = {
+//   buttonTitle: {
+//     transformOrigin: 'right center',
+//   },
+//   cardButton: {
+//     transformOrigin: 'right center',
+//   },
+// }
 
-const {
-  container,
-  textContent,
-  imageContent,
-  ctaContainer,
-  bannerTitle,
-  bannerSubTitle,
-} = styles
+const { container, textContent, bannerTitle, bannerSubTitle } = styles
 const Banner: FC<BannerProps> = ({
   title,
   subTitle,
@@ -50,7 +43,9 @@ const Banner: FC<BannerProps> = ({
             overrides={overrides}
             styles={overrides?.cta ?? {}}
             title={cta}
-            onClick={() => console.log('great!')}
+            onClick={() => {
+              console.log('great!')
+            }}
           />
         </div>
       </div>

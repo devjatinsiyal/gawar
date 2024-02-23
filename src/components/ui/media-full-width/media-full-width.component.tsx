@@ -1,7 +1,7 @@
 import { type FC } from 'react'
 import styles from './media-full-width.module.scss'
 
-const { container, slideBg } = styles
+const { container } = styles
 
 const MediaFullWidth: FC = () => {
   return (

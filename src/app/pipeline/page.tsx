@@ -1,6 +1,6 @@
-import React from 'react'
+import { type FC } from 'react'
 
-const PipelinePage = () => {
+const PipelinePage: FC = () => {
   return <div>PipelinePage</div>
 }
 

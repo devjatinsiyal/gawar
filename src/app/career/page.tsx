@@ -1,4 +1,4 @@
-import React from 'react'
+import { type FC } from 'react'
 import Banner from '@/components/ui/main-banner/main-banner.component'
 
 const pageData = {
@@ -10,7 +10,7 @@ const pageData = {
     //   ['backgroundImage']: `url('/images/gawar-g.svg'), url('/images/home-main-banner.svg')`,
     //   ['backgroundSize']: `contain, 58%`,
     //   ['backgroundPosition']: `calc(100% - 4.5rem) top, 95% center`,
-    ['backgroundColor']: `var(--color-bg-secondary)`,
+    backgroundColor: `var(--color-bg-secondary)`,
   },
 }
 
@@ -26,7 +26,7 @@ const overrides: NestedRecord = {
   },
 }
 
-const CareerPage = () => {
+const CareerPage: FC = () => {
   return (
     <div>
       <Banner {...pageData} overrides={overrides} />

@@ -1,6 +1,5 @@
-import React, { CSSProperties } from 'react'
+import { type CSSProperties, type FC } from 'react'
 import Banner from '@/components/ui/main-banner/main-banner.component'
-import MediaFullWidth from '@/components/ui/media-full-width/media-full-width.component'
 interface PageDataInterface {
   title: string
   subTitle: string
@@ -25,11 +24,10 @@ const pageData: PageDataInterface = {
   //   }
 }
 
-const HomePage = () => {
+const HomePage: FC = () => {
   return (
     <>
       <Banner {...pageData} />
-      <MediaFullWidth />
     </>
   )
 }

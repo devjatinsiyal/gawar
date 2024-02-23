@@ -1,9 +1,7 @@
-import { CSSProperties } from 'react'
+import { type CSSProperties } from 'react'
 
 declare global {
-  interface NestedRecord {
-    [key: string]: CSSProperties
-  }
+  type NestedRecord = Record<string, CSSProperties>
 
   type eligibleProducts = Record<string, boolean>
   interface ProgramCardProps {

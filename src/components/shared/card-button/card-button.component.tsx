@@ -1,5 +1,5 @@
 'use client'
-import { CSSProperties, type FC } from 'react'
+import { type CSSProperties, type FC } from 'react'
 import {
   ArrowLeftImage,
   ArrowRightImage,
@@ -43,7 +43,9 @@ const CardButton: FC<CardButtonProps> = ({
     onClick={() => {
       onClick()
     }}
-    className={`${cardButton} ${!iconPlacement || iconPlacement === 'right' ? cardButtonRight : cardButtonLeft} ${type ? (type === 'primary' ? cardButtonPrimary : cardButtonSecondary) : cardButtonPrimary}`}
+    className={`${cardButton} 
+    ${!iconPlacement || iconPlacement === 'right' ? cardButtonRight : cardButtonLeft} 
+    ${type ? (type === 'primary' ? cardButtonPrimary : cardButtonSecondary) : cardButtonPrimary}`}
     style={style ? { ...style, ...overrides?.cardButton } : {}}>
     {iconPlacement && iconPlacement === 'left' ? (
       <div className={iconLeftContainer}>

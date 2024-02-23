@@ -1,16 +1,16 @@
-import React from 'react'
+import { type FC } from 'react'
 import NotFoundBanner from '@/components/ui/not-found-banner/not-found-banner.component'
 const pageData = {
   title: 'Hey, We are currently building this page',
   cta: 'Lets take you back',
   background: {
-    ['background-image']: `url('/images/not-found-banner.svg')`,
-    ['background-size']: `cover`,
-    ['background-position']: `center`,
+    backgroundImage: `url('/images/not-found-banner.svg')`,
+    backgroundSize: `cover`,
+    backgroundPosition: `center`,
   },
 }
 
-const NotFoundPage = () => {
+const NotFoundPage: FC = () => {
   return (
     <>
       <NotFoundBanner {...pageData} />

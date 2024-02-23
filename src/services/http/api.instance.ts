@@ -36,7 +36,9 @@ const interceptRequests = (axiosInstance: AxiosInstance): void => {
         // eslint-disable-next-line @typescript-eslint/promise-function-async
         return await new Promise(resolve =>
           setTimeout(resolve, RETRY_DELAY),
-        ).then(() => axiosInstance(config as AxiosRequestConfig<any>))
+        ).then(
+          async () => await axiosInstance(config as AxiosRequestConfig<any>),
+        )
       }
 
       return await Promise.reject(error)

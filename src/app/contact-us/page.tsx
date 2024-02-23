@@ -1,5 +1,5 @@
 import Banner from '@/components/ui/main-banner/main-banner.component'
-import React from 'react'
+import { type FC } from 'react'
 
 const pageData = {
   title: 'Coffee with expert?',
@@ -10,7 +10,7 @@ const pageData = {
     //   ['backgroundImage']: `url('/images/gawar-g.svg'), url('/images/home-main-banner.svg')`,
     //   ['backgroundSize']: `contain, 58%`,
     //   ['backgroundPosition']: `calc(100% - 4.5rem) top, 95% center`,
-    ['backgroundColor']: `var(--color-bg-secondary)`,
+    backgroundColor: `var(--color-bg-secondary)`,
   },
 }
 
@@ -25,7 +25,7 @@ const overrides: NestedRecord = {
     lineHeight: '1.575rem',
   },
 }
-const ContactUsPage = () => {
+const ContactUsPage: FC = () => {
   return (
     <div>
       <Banner {...pageData} overrides={overrides} />

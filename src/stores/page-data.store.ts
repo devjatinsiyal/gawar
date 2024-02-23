@@ -6,9 +6,9 @@ export const pageDataStore = create(set => ({
     subTitle: 'Premier Player in Expressways, Bridges & Tunnels across India',
     cta: 'Know more',
     background: {
-      ['background-image']: `url('/images/gawar-g.svg'), url('/images/home-main-banner.svg')`,
-      ['background-size']: `contain, 58%`,
-      ['background-position']: `calc(100% - 4.5rem) top, 95% center`,
+      backgroundImage: `url('/images/gawar-g.svg'), url('/images/home-main-banner.svg')`,
+      backgroundSize: `contain, 58%`,
+      backgroundPosition: `calc(100% - 4.5rem) top, 95% center`,
     },
   },
   updatePageData: (pageData: any) => {

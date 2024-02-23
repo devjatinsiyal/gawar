@@ -11,14 +11,7 @@ interface NotFoundBannerProps {
   overrides?: NestedRecord
 }
 
-const {
-  container,
-  textContent,
-  imageContent,
-  ctaContainer,
-  bannerTitle,
-  bannerSubTitle,
-} = styles
+const { container, textContent, bannerTitle } = styles
 const NotFoundBanner: FC<NotFoundBannerProps> = ({
   title,
   cta,
@@ -35,7 +28,9 @@ const NotFoundBanner: FC<NotFoundBannerProps> = ({
         <div>
           <CardButton
             iconPlacement='left'
-            onClick={() => router.back()}
+            onClick={() => {
+              router.back()
+            }}
             title={cta}
             overrides={overrides}
             styles={overrides?.cta}

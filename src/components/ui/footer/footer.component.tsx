@@ -35,7 +35,7 @@ const Footer: FC = () => {
         <div className={content}>
           {/* <div className={tab}></div> */}
           {navLinks[0].map(({ name, link: href }) => (
-            <li>
+            <li key={name}>
               <Link
                 className={`${link} ${pathname === href ? active : ''}`}
                 href={href}
@@ -48,7 +48,7 @@ const Footer: FC = () => {
         <div className={content}>
           {/* <div className={tab}></div> */}
           {navLinks[1].map(({ name, link: href }) => (
-            <li>
+            <li key={name}>
               <Link
                 className={`${link} ${pathname === href ? active : ''}`}
                 href={href}
@@ -61,7 +61,7 @@ const Footer: FC = () => {
         <div className={content}>
           {/* <div className={tab}></div> */}
           {navLinks[2].map(({ name, link: href }) => (
-            <li>
+            <li key={name}>
               <Link
                 className={`${link} ${pathname === href ? active : ''}`}
                 href={href}
