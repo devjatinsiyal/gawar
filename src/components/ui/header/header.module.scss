@@ -1,0 +1,146 @@
+@import '@/styles/utils/mixins.scss';
+
+.header {
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1.875rem 4.5rem;
+  transition: all 1s ease;
+
+  nav {
+    transition: all 1s ease;
+  }
+  .logo {
+    margin-right: auto;
+  }
+
+  .nav__links {
+    list-style: none;
+    display: flex;
+
+    a,
+    .cta,
+    .overlay__content a {
+      font-weight: 500;
+      color: var(--color-link-primary);
+      text-decoration: none;
+    }
+
+    li {
+      padding: 0rem 1.9063rem;
+
+      a {
+        position: relative;
+        @include link-typography;
+        transition: all 0.3s ease 0s;
+      }
+
+      a:hover,
+      a.active {
+        font-weight: 700;
+        font-size: 1.075rem;
+      }
+      a::after {
+        content: '';
+        position: absolute;
+        bottom: -0.125rem; /* Adjust this value according to your design */
+        left: 0;
+        width: 0;
+        height: 0.125rem; /* Adjust this value according to your design */
+        background-color: var(
+          --color-link-hover-primary
+        ); /* Color of the line */
+        transition: width 0.3s ease; /* Smooth transition for the width */
+      }
+      a:hover::after,
+      a.active::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .cta {
+    min-width: 7.5625rem;
+    margin-left: 20px;
+    padding: 0.875rem 1.5rem;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    @include text-typography(1.125rem, 1.575rem, 0em, center, 400);
+
+    &:hover {
+      background-color: var(--color-primary);
+    }
+  }
+}
+
+/* Mobile Nav */
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+
+  &--active {
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      padding: 15px;
+      font-size: 36px;
+      display: block;
+      transition: all 0.3s ease 0s;
+
+      &:hover,
+      &:focus {
+        color: #0088a9;
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+      color: #edf0f1;
+      cursor: pointer;
+
+      @media screen and (max-height: 450px) {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}

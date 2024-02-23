@@ -1,0 +1,62 @@
+@import '@/styles/utils/mixins.scss';
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  //   background-image: url('/images/gawar-g.svg'), url('/images/home-main-banner.svg');
+  //   background-size: contain, 58%;
+  //   background-position: calc(100% - 4.5rem) top, 95% center;
+
+  .textContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 4.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    color: white;
+
+    .bannerTitle {
+      font-size: 2.5rem;
+      font-weight: 600;
+      line-height: 3.5rem;
+      letter-spacing: 0em;
+      text-align: center;
+      max-width: 28.125rem;
+    }
+
+    .bannerSubTitle {
+      font-size: 1.625rem;
+      font-weight: 400;
+      line-height: 2.275rem;
+      letter-spacing: 0rem;
+      text-align: center;
+      max-width: 37.125rem;
+    }
+
+    .ctaContainer {
+      min-width: 7.5625rem;
+      padding: 0.875rem 1.5rem;
+      margin-top: 1rem;
+      background-color: var(--color-primary);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      @include text-typography(1.125rem, 1.575rem, 0em, center, 400);
+
+      &:hover {
+        background-color: var(--color-primary);
+      }
+    }
+  }
+}

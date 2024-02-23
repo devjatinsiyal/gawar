@@ -1,0 +1,56 @@
+@import '@/styles/utils/mixins.scss';
+.welcomeButton {
+  width: 20.625rem;
+  height: 56px;
+  padding: 12px 24px;
+  border-radius: 16px;
+  gap: 8px;
+  background: var(--text-color-primary);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 500px) {
+    width: fit-content !important;
+  }
+
+  .buttonContainer {
+    display: flex;
+    gap: 0.5rem;
+    .buttonTitle {
+      @include text-typography(1.25rem, 1.5rem, 0rem, left);
+      margin: auto;
+    }
+    .logoContainer {
+      width: 2rem;
+      img,
+      svg {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.spinner {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  margin: 2px;
+  border-radius: 50%;
+  border: 3px solid rgb(177 191 194 / 34%);
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+  top: 0px;
+  right: 0px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

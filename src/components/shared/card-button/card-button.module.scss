@@ -1,0 +1,101 @@
+@import '@/styles/utils/mixins.scss';
+.cardButton {
+  @include text-typography(1.125rem, 1.575rem, 0em, center, 400);
+  min-width: 7.5625rem;
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.7s ease;
+  &.cardButtonLeft {
+    transform-origin: right center;
+  }
+  &.cardButtonRight {
+    transform-origin: left center;
+  }
+
+  .buttonTitle {
+    margin: auto;
+    min-width: 5rem;
+    transition: all 0.7s ease;
+    &.buttonTitleLeft {
+      transform-origin: right center;
+    }
+    &.buttonTitleRight {
+      transform-origin: left center;
+    }
+  }
+
+  .iconRightContainer {
+    position: absolute;
+    top: 50%;
+    opacity: 0%;
+    right: 5px;
+    transform: translate(-50%, -50%);
+    transition: all 0.7s ease;
+  }
+
+  .iconLeftContainer {
+    position: absolute;
+    top: 50%;
+    opacity: 0%;
+    left: 15px;
+    transform: translate(-50%, -50%);
+    transition: all 0.7s ease;
+  }
+  &:hover {
+    transform: scalex(1.1);
+  }
+  &:hover .iconRightContainer {
+    opacity: 100%;
+    right: 0px;
+  }
+  &:hover .iconLeftContainer {
+    opacity: 100%;
+    left: 25px;
+  }
+  &:hover .buttonTitle {
+    transform: scaleX(0.9);
+  }
+}
+
+.cardButtonPrimary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.cardButtonSecondary {
+  background: rgba(101, 103, 111, 0.5);
+  color: white;
+}
+
+.spinner {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  margin: 2px;
+  border-radius: 50%;
+  border: 3px solid rgb(177 191 194 / 34%);
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+  top: 0px;
+  right: 0px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

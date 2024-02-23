@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('gilroy-regular.eot'); /* IE9 Compat Modes */
+  src:
+    local(''),
+    url('gilroy-regular.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('gilroy-regular.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('gilroy-regular.woff') format('woff'),
+    /* Modern Browsers */ url('gilroy-regular.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('gilroy-regular.svg#Gilroy') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('gilroy-medium.eot'); /* IE9 Compat Modes */
+  src:
+    local(''),
+    url('gilroy-medium.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('gilroy-medium.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('gilroy-medium.woff') format('woff'),
+    /* Modern Browsers */ url('gilroy-medium.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('gilroy-medium.svg#Gilroy') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('gilroy-semibold.eot'); /* IE9 Compat Modes */
+  src:
+    local(''),
+    url('gilroy-semibold.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('gilroy-semibold.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('gilroy-semibold.woff') format('woff'),
+    /* Modern Browsers */ url('gilroy-semibold.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('gilroy-semibold.svg#Gilroy') format('svg'); /* Legacy iOS */
+}

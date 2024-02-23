@@ -1,0 +1,17 @@
+.container {
+  max-width: 586px;
+  min-height: 562px;
+  padding: 2.5rem;
+  border-radius: 40px;
+  gap: 40px;
+  background-color: white;
+  box-shadow: 8px 8px 36px 0px #0000000f;
+  margin: auto;
+
+  @media (max-width: 480px) {
+    width: 95%;
+    max-width: unset !important;
+    min-width: unset !important;
+    padding: 2rem;
+  }
+}

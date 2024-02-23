@@ -1,0 +1,27 @@
+@mixin text-typography(
+  $fontSize: 1.5rem,
+  $lineHeight: 1.75rem,
+  $letterSpacing: 0em,
+  $textAlign: center,
+  $fontWeight: 400
+) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+  text-align: $textAlign;
+  font-weight: $fontWeight;
+}
+
+@mixin link-typography {
+  font-size: 1.125rem;
+  line-height: 1.575rem;
+  letter-spacing: 0em;
+  text-align: center;
+  font-weight: 400;
+}
+
+@mixin centralize-container {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}

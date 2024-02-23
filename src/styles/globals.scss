@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+// @import '../assets/fonts/fonts.css';
+@import './root.scss';
+@import './utils/tooltip.scss';
+@import './utils/mixins.scss';
+
+@mixin text-typography($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+}
+
+.text-color-primary {
+  color: var(--text-color-primary);
+}
+.container-full-width--mobile {
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+}
+
+.front__content {
+  display: flex;
+  flex-direction: column;
+  > div {
+    flex-grow: 1;
+  }
+  height: 100vh;
+}

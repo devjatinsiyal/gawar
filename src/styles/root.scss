@@ -1,0 +1,30 @@
+*,
+:root {
+  // font-family: 'Gilroy';
+  font-style: normal;
+  // background-color: white;
+  --color-primary: #000080;
+  --color-secondary: #16558f;
+
+  --color-link-primary: #494949;
+  --color-link-hover-primary: #ff9933;
+  --color-text-primary: #202020;
+  --color-text-secondary: #65676f;
+  --color-text-error: #e34935;
+
+  --color-label-primary: #6b7785;
+  // --color-text-error-light: rgba(181, 66, 66, 0.1);
+  // --color-button-background-primary: #0c6478;
+  // --color-button-background-secondary: #65676f;
+
+  --color-footer: #ecf2f4;
+
+  --color-bg-primary: #fff;
+  --color-bg-secondary: #d9d9d9;
+}
+
+@media (max-width: 500px) {
+  :root {
+    font-size: 14px;
+  }
+}
