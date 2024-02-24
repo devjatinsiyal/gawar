@@ -4,20 +4,24 @@
   position: relative;
   //   background-color: green;
   // background-image: url('/videos/contruction.mp4');
+  background: url('/gifs/construction-new.gif');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 
-  .slideBg {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+  // .slideBg {
+  //   position: fixed;
+  //   width: 100%;
+  //   display: flex;
+  //   justify-content: center;
+  //   bottom: 0;
+  //   left: 0;
+  //   z-index: -1;
 
-    & > video,
-    & > img {
-      height: 100%;
-      object-fit: contain;
-    }
-  }
+  //   & > video,
+  //   & > img {
+  //     height: 100%;
+  //     object-fit: contain;
+  //   }
+  // }
 }
